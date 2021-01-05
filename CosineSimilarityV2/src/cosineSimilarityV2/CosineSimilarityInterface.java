@@ -69,7 +69,6 @@ public class CosineSimilarityInterface implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		CosineSimilarityMathV2 c = new CosineSimilarityMathV2();
 		c.cosineSimilarity(v1Text.getText(), v2Text.getText());
-		System.out.printf(c.toString());
 		csLabel.setText(c.toString());
 	} // end of calculations
 

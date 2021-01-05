@@ -68,16 +68,9 @@ public class CosineSimilarityInterface implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		CosineSimilarityMathV2 c = new CosineSimilarityMathV2();
-		vectorOne = v1Text.getText();
-		vectorTwo = v2Text.getText();
-		c.vectorOneSplit(vectorOne);
-		c.vectorTwoSplit(vectorTwo);
-		c.combineVectorWords(c.vectorOneWords, c.vectorTwoWords);
-		c.vectorOneWC(c.combineVectorWords(c.vectorOneWords, c.vectorTwoWords), c.vectorOneWords);
-		c.vectorTwoWC(c.combineVectorWords(c.vectorOneWords, c.vectorTwoWords), c.vectorTwoWords);
-		System.out.printf("Cosine Similarity: %.3f" + "\n", c.cosineSimilarity(c.vectorOneWC, c.vectorTwoWC));
-		csLabel.setText(
-				String.format("Cosine Similarity: %.3f" + "\n", c.cosineSimilarity(c.vectorOneWC, c.vectorTwoWC)));
-		c.prepNewTest();
+		c.cosineSimilarity(v1Text.getText(), v2Text.getText());
+		System.out.printf(c.toString());
+		csLabel.setText(c.toString());
 	} // end of calculations
+
 }// end of class UserInterface

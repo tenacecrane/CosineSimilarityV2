@@ -113,6 +113,10 @@ public class CosineSimilarityMathV2 {
 		return cosineSimilarity;
 	}
 
+	/**
+	 * toString() override in case print to console is needed.
+	 */
+
 	public String toString() {
 		String cosineSimilarityString = (String.format("Cosine Similarity: %.3f" + "\n", cosineSimilarity));
 		return cosineSimilarityString;
